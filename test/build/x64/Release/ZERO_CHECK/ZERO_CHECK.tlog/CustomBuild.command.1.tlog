@@ -1,0 +1,10 @@
+^C:\USERS\ZXD41\DESKTOP\OPEN3D\TEST\BUILD\CMAKEFILES\C4950F8C1B6DC30C63236B93333B6A15\GENERATE.STAMP.RULE
+setlocal
+C:\Users\zxd41\Desktop\cmake-3.23.1-windows-x86_64\bin\cmake.exe -SC:/Users/zxd41/Desktop/open3d/test -BC:/Users/zxd41/Desktop/open3d/test/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/zxd41/Desktop/open3d/test/build/TestVisualizer.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

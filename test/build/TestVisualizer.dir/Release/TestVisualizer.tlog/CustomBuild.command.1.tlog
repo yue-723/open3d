@@ -1,0 +1,10 @@
+^C:\USERS\ZXD41\DESKTOP\OPEN3D\TEST\CMAKELISTS.TXT
+setlocal
+C:\Users\zxd41\Desktop\cmake-3.23.1-windows-x86_64\bin\cmake.exe -SC:/Users/zxd41/Desktop/open3d/test -BC:/Users/zxd41/Desktop/open3d/test/build --check-stamp-file C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

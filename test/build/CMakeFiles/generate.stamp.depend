@@ -1,0 +1,38 @@
+# CMake generation dependency list for this directory.
+C:/Program Files (x86)/Open3D/CMake/Open3DConfig.cmake
+C:/Program Files (x86)/Open3D/CMake/Open3DConfigVersion.cmake
+C:/Program Files (x86)/Open3D/CMake/Open3DTargets-release.cmake
+C:/Program Files (x86)/Open3D/CMake/Open3DTargets.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeCInformation.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeCXXInformation.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeFindDependencyMacro.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeGenericSystem.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeRCInformation.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CheckIncludeFile.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/CheckLibraryExists.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Compiler/MSVC-C.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Compiler/MSVC-CXX.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/FindOpenGL.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/FindOpenMP.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/FindPackageMessage.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/FindThreads.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Platform/Windows-MSVC-C.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Platform/Windows-MSVC.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Platform/Windows.cmake
+C:/Users/zxd41/Desktop/cmake-3.23.1-windows-x86_64/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake
+C:/Users/zxd41/Desktop/open3d/test/CMakeLists.txt
+C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/3.23.1/CMakeCCompiler.cmake
+C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/3.23.1/CMakeCXXCompiler.cmake
+C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/3.23.1/CMakeRCCompiler.cmake
+C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/3.23.1/CMakeSystem.cmake

@@ -1,0 +1,3 @@
+C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/TestVisualizer.dir
+C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/zxd41/Desktop/open3d/test/build/CMakeFiles/ZERO_CHECK.dir

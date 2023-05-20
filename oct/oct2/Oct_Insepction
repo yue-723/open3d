@@ -1,0 +1,127 @@
+import os
+import open3d as o3d
+import numpy as np
+import tkinter as tk
+from tkinter import Menu, filedialog
+
+
+def display_inlier_outlier(cloud, ind):
+    inlier_cloud = cloud.select_by_index(ind)
+    outlier_cloud = cloud.select_by_index(ind, invert=True)
+
+    outlier_cloud.paint_uniform_color([1, 0, 0])
+    vis = o3d.visualization.Visualizer()
+    vis.create_window(window_name='SSI_OCT', width=1080,
+                      height=960, visible=True)
+    vis.add_geometry(inlier_cloud)
+    vis.add_geometry(outlier_cloud)
+
+    vis.run()
+
+
+def startButton_Click():
+
+    # filePath = filePath_label_text['text']
+    # if filePath == "":
+    #     statusUpdate("Please select file !")
+    #     return
+    # filePath = os.path.relpath(filePath)  # 轉成相對路徑
+    filePath = "./test_data/1124_c_pcd.ply"
+    pcd = o3d.io.read_point_cloud(filePath)
+
+    vis = o3d.visualization.Visualizer()
+    voxel_down_pcd = pcd.voxel_down_sample(voxel_size=0.02)
+    inlier_pcd, idx = voxel_down_pcd.remove_statistical_outlier(
+        nb_neighbors=20, std_ratio=7.5)
+    print(
+        f"original points: {pcd} remove outlier points : {len(np.asarray(pcd.points)) - len(np.asarray(inlier_pcd.points))}")
+    # display_inlier_outlier(voxel_down_pcd, idx)
+
+    print("=======================AxisAligned_BBox's INFO=======================")
+    AxisAligned_BBox = inlier_pcd.get_axis_aligned_bounding_box()
+    AxisAligned_BBox.color = (1, 0, 0)
+    print("Height: ", abs(np.asarray(AxisAligned_BBox.get_max_bound())[2]
+                          - np.asarray(AxisAligned_BBox.get_min_bound())[2]))
+    BBox_Vol = 1
+    for i in range(3):
+        BBox_Vol
+        BBox_Vol *= abs(np.asarray(AxisAligned_BBox.get_max_bound())[i]
+                        - np.asarray(AxisAligned_BBox.get_min_bound())[i])
+    print("Volume: ", BBox_Vol)
+
+    print("========================Oriented_BBox's INFO========================")
+    Oriented_BBox = inlier_pcd.get_oriented_bounding_box()
+    Oriented_BBox.color = (0, 1, 0)
+    print("Height: ", abs(np.asarray(Oriented_BBox.get_max_bound())[2]
+                          - np.asarray(Oriented_BBox.get_min_bound())[2]))
+    BBox_Vol = 1
+    for i in range(3):
+        BBox_Vol
+        BBox_Vol *= abs(np.asarray(Oriented_BBox.get_max_bound())[i]
+                        - np.asarray(Oriented_BBox.get_min_bound())[i])
+    print("Volume: ", BBox_Vol)
+
+    vis.create_window(window_name='SSI_OCT', width=1080,
+                      height=960, visible=True)
+    vis.add_geometry(inlier_pcd)
+    vis.add_geometry(AxisAligned_BBox)
+    vis.add_geometry(Oriented_BBox)
+    vis.run()
+
+    hull, _ = inlier_pcd.compute_convex_hull()
+    hull_ls = o3d.geometry.LineSet.create_from_triangle_mesh(hull)
+    hull_ls.paint_uniform_color((1, 0, 0))
+    o3d.visualization.draw_geometries([inlier_pcd, hull_ls])
+    print("========================ConvexHull's INFO========================")
+    print(hull, hull_ls, sep="\n")
+
+    # statusUpdate("")
+
+
+# def menuLoad_Click():
+#     filePath = filedialog.askopenfilename(
+#         parent=root, initialdir='./', filetypes=(("ply files", "*.ply"), ("all files", "*.*")))
+#     filePath_label_text['text'] = filePath
+
+
+# def statusUpdate(s):
+#     Status_label_text['text'] = s
+
+
+# root = tk.Tk()
+# root.title('3D ViewPoint ScrShot')
+# root.geometry('480x260')
+# filePath = ""
+# # Create Menu
+# menuBar = tk.Menu(root)
+# fileMenu = tk.Menu(menuBar)
+# fileMenu = Menu(menuBar, tearoff=0)
+# fileMenu.add_command(label="Load", command=menuLoad_Click)
+# menuBar.add_cascade(label="File", menu=fileMenu)
+# root.config(menu=menuBar)
+# # Create Label
+# filePath_label = tk.Label(root, text=' File Path :  ', font=(
+#     'Microsoft JhengHei UI', 10, 'bold'))
+# filePath_label.place(x=5, y=7)
+# filePath_label_text = tk.Label(
+#     root, text='', font=('Microsoft JhengHei UI', 10, 'bold'))
+# filePath_label_text.place(x=80, y=7)
+
+
+# Status_label = tk.Label(root, text=' Status :  ', font=(
+#     'Microsoft JhengHei UI', 10, 'bold'))
+# Status_label.place(x=5, y=187)
+# Status_label_text = tk.Label(root, text='', font=(
+#     'Microsoft JhengHei UI', 10, 'bold'))
+# Status_label_text.place(x=67, y=187)
+
+# # Start Button
+# StartButton = tk.Button(root, command=startButton_Click, text="Start", font=(
+#     'Microsoft JhengHei UI', 9, 'bold'), background='white smoke')
+# StartButton.place(x=420, y=220)
+
+if __name__ == "__main__":
+
+    # Start
+    # root.mainloop()
+    startButton_Click()
